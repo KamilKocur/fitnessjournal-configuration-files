@@ -1,0 +1,12 @@
+server:
+  port: 0 # random port
+
+  data:
+    cassandra:
+      contact-points: localhost
+      port: 9042
+      #username: xxx
+      #password: xxx
+      local-datacenter: datacenter1
+      keyspace-name: fitnessjournal_product
+      schema-action: none
