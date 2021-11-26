@@ -9,6 +9,6 @@ spring:
         - id: product-service
           predicates:
             - Path=/api/v1/products/**
-          uri: lb://product-service
+          uri: lb://PRODUCT-SERVICE
           filters:
             - RewriteLocationResponseHeader=AS_IN_REQUEST, Location
