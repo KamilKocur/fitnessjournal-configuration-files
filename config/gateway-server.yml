@@ -1,3 +1,15 @@
 eureka:
   client:
     register-with-eureka: false
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          predicates:
+            - Path=/api/v1/products/**
+          uri: lb://product-service
+          filters:
+            - RewritePath=/api(?<segment>.*), $\{segment}
+            - RewriteLocationResponseHeader=AS_IN_REQUEST,Location
