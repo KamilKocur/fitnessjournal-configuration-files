@@ -7,7 +7,7 @@ spring:
       routes:
         - id: product-service
           predicates:
-            - Path=/api/v1/products/*
+            - Path=/api/v1/products/**
           uri: lb://PRODUCT-SERVICE
           filters:
             - RewriteLocationResponseHeader=AS_IN_REQUEST, Location
