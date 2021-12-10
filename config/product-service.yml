@@ -1,0 +1,8 @@
+server:
+  port: 0 # random port
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: fitnessjournal_product
+      schema-action: none

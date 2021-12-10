@@ -1,7 +1,7 @@
 spring:
   data:
     cassandra:
-      contact-points: localhost
+      contact-points: product-cassandra-database
       port: 9042
       #username: xxx
       #password: xxx
